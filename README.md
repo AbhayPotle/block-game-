@@ -6,6 +6,9 @@
 ![MediaPipe](https://img.shields.io/badge/AI-MediaPipe-orange?style=for-the-badge&logo=google)
 ![JavaScript](https://img.shields.io/badge/Web-Canvas_API-yellow?style=for-the-badge&logo=javascript)
 ![CSS3D](https://img.shields.io/badge/Style-CSS_3D-pink?style=for-the-badge&logo=css3)
+![Vibe Coded](https://img.shields.io/badge/Vibe_Coded-AI_Generated-8A2BE2?style=for-the-badge&logo=openai)
+
+> **⚡ This project was "Vibe Coded" entirely using AI assistance.**
 
 ---
 
