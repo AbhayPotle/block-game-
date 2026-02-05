@@ -1,0 +1,42 @@
+# Hand-Controlled Block Game Tasks
+
+- [/] Project Setup <!-- id: 0 -->
+    - [x] Create virtual environment and install dependencies (opencv-python, mediapipe, pygame, numpy) <!-- id: 1 -->
+- [x] Hand Tracking Module <!-- id: 2 -->
+    - [x] Implement video capture with OpenCV <!-- id: 3 -->
+    - [x] Integrate MediaPipe Hands for landmark detection <!-- id: 4 -->
+    - [x] Visualize hand landmarks on screen <!-- id: 5 -->
+- [x] Gesture Recognition Logic <!-- id: 6 -->
+    - [x] Define control scheme (e.g., Left/Right movement, Rotate, Drop) <!-- id: 7 -->
+    - [x] Implement logic to translate landmarks to game commands <!-- id: 8 -->
+- [x] Game Development (Block Game) <!-- id: 9 -->
+    - [x] Initialize Pygame window <!-- id: 10 -->
+    - [x] Create game loop and basic state management <!-- id: 11 -->
+    - [x] Implement falling blocks (tetrominoes or similar) <!-- id: 12 -->
+    - [x] Implement collision detection and scoring <!-- id: 13 -->
+- [/] Integration <!-- id: 14 -->
+    - [x] Combine Hand Tracking and Pygame loop <!-- id: 15 -->
+    - [x] Refine controls for responsiveness <!-- id: 16 -->
+- [/] Verification and Polish <!-- id: 17 -->
+    - [/] Test gameplay <!-- id: 18 -->
+    - [ ] Add visual polish and instructions <!-- id: 19 -->
+- [x] Web Version (For Sharing) <!-- id: 20 -->
+    - [x] Create HTML structure <!-- id: 21 -->
+    - [x] Implement MediaPipe Hands in JS <!-- id: 22 -->
+    - [x] Port Game Logic to JavaScript <!-- id: 23 -->
+    - [x] Create deployment instructions <!-- id: 24 -->
+- [x] UI/UX Overhaul (Premium Feel) <!-- id: 25 -->
+    - [x] Create Landing Page (Start Screen) <!-- id: 26 -->
+    - [x] Apply "Cyberpunk/Neon" visual theme <!-- id: 27 -->
+    - [x] Add animations and glow effects <!-- id: 28 -->
+- [x] Control Refinement <!-- id: 29 -->
+    - [x] Implement smooth "Virtual Joystick" movement <!-- id: 30 -->
+    - [x] Improve Rotation gesture detection <!-- id: 31 -->
+    - [x] Add visual feedback for gestures <!-- id: 32 -->
+- [x] Game Over Experience <!-- id: 33 -->
+    - [x] Create Game Over Modal with Score <!-- id: 34 -->
+    - [x] Implement Play Again functionality <!-- id: 35 -->
+    - [x] Add "Lock Out" Game Over condition (Row 0 check) <!-- id: 36 -->
+- [x] Hand Detection Start <!-- id: 37 -->
+    - [x] Create "Scanning" Overlay <!-- id: 38 -->
+    - [x] Implement detection wait logic <!-- id: 39 -->

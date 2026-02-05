@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary": "Implementation plan for the Hand-Controlled Block Game. Uses MediaPipe for tracking and Pygame for the game engine.",
+  "updatedAt": "2026-02-05T04:06:26.330324700Z"
+}

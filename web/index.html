@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon HandBlock</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- MediaPipe Usage -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- Landing / Start Screen -->
+    <div id="landing-screen" class="active">
+        <div class="landing-content">
+            <h1 class="neon-title">NEON BLOCKS</h1>
+            <p class="subtitle">Hand-Controlled Cyberpunk Puzzle</p>
+
+            <div class="instructions-panel">
+                <h3>HOW TO PLAY</h3>
+                <div class="instruction-item">
+                    <span class="icon">✋</span>
+                    <p><strong>MOVE:</strong> Slide hand LEFT or RIGHT</p>
+                </div>
+                <div class="instruction-item">
+                    <span class="icon">👌</span>
+                    <p><strong>ROTATE:</strong> Pinch Index & Thumb</p>
+                </div>
+            </div>
+
+            <button id="start-btn" class="neon-button">INITIALIZE SYSTEM</button>
+        </div>
+    </div>
+
+    <!-- Hand Scan Screen -->
+    <div id="scan-screen" class="hidden">
+        <div class="landing-content">
+            <h2 class="neon-text" style="color: var(--neon-blue);">INITIALIZING SENSORS</h2>
+            <div class="scanner-anim"></div>
+            <p id="scan-status" class="subtitle">PLEASE SHOW HAND TO CAMERA</p>
+        </div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="game-over-screen" class="hidden">
+        <div class="landing-content">
+            <h1 class="neon-title" style="color: red; text-shadow: 0 0 10px red;">SYSTEM FAILURE</h1>
+            <p class="subtitle">GAME OVER</p>
+
+            <div class="score-display">
+                <p>FINAL SCORE</p>
+                <h2 id="final-score" class="neon-text">000000</h2>
+            </div>
+
+            <button id="restart-btn" class="neon-button">REBOOT SYSTEM</button>
+        </div>
+    </div>
+
+    <!-- Main Game Interface -->
+    <div class="container">
+        <div class="ui-header">
+            <div id="score-box" class="hud-panel">
+                <span class="hud-label">SCORE</span>
+                <span id="score">000000</span>
+            </div>
+            <div id="status-box" class="hud-panel pulse-alert">
+                <span class="hud-label">SYSTEM</span>
+                <span id="status">STANDBY</span>
+            </div>
+        </div>
+
+        <div class="game-wrapper">
+            <!-- Camera Feed + Hand Visualizer -->
+            <div class="video-container cyber-border">
+                <video class="input_video"></video>
+                <canvas class="output_canvas" width="640" height="480"></canvas>
+
+                <!-- Virtual Joystick Overlay -->
+                <div class="joystick-overlay">
+                    <div class="zone left-zone"></div>
+                    <div class="zone center-zone"></div>
+                    <div class="zone right-zone"></div>
+                    <div id="hand-cursor" class="cursor"></div>
+                </div>
+            </div>
+
+            <!-- Game Board -->
+            <div class="game-container cyber-border-gold">
+                <canvas id="gameCanvas" width="300" height="600"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

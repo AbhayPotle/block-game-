@@ -1,0 +1,22 @@
+# Hand-Controlled Block Game Tasks
+
+- [/] Project Setup <!-- id: 0 -->
+    - [x] Create virtual environment and install dependencies (opencv-python, mediapipe, pygame, numpy) <!-- id: 1 -->
+- [x] Hand Tracking Module <!-- id: 2 -->
+    - [x] Implement video capture with OpenCV <!-- id: 3 -->
+    - [x] Integrate MediaPipe Hands for landmark detection <!-- id: 4 -->
+    - [x] Visualize hand landmarks on screen <!-- id: 5 -->
+- [x] Gesture Recognition Logic <!-- id: 6 -->
+    - [x] Define control scheme (e.g., Left/Right movement, Rotate, Drop) <!-- id: 7 -->
+    - [x] Implement logic to translate landmarks to game commands <!-- id: 8 -->
+- [x] Game Development (Block Game) <!-- id: 9 -->
+    - [x] Initialize Pygame window <!-- id: 10 -->
+    - [x] Create game loop and basic state management <!-- id: 11 -->
+    - [x] Implement falling blocks (tetrominoes or similar) <!-- id: 12 -->
+    - [x] Implement collision detection and scoring <!-- id: 13 -->
+- [/] Integration <!-- id: 14 -->
+    - [x] Combine Hand Tracking and Pygame loop <!-- id: 15 -->
+    - [x] Refine controls for responsiveness <!-- id: 16 -->
+- [ ] Verification and Polish <!-- id: 17 -->
+    - [ ] Test gameplay <!-- id: 18 -->
+    - [ ] Add visual polish and instructions <!-- id: 19 -->

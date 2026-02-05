@@ -1,0 +1,43 @@
+# Hand-Controlled Block Game Implementation Plan
+
+## Goal Description
+Create a "Block Game" (Tetris-style) playable using hand gestures captured via a webcam. The project uses Computer Vision and Deep Learning (via MediaPipe) to interpret hand movements as game controls.
+
+## User Review Required
+- **Control Scheme**: I propose using hand position relative to the screen center for movement (Left/Right) and specific gestures (e.g., pinch or fist) for rotation/drop.
+- **Dependencies**: Requires a webcam and installation of `opencv-python`, `mediapipe`, and `pygame`.
+
+## Proposed Changes
+
+### Setup
+#### [NEW] [requirements.txt](file:///c:/Users/abhay/blocks/requirements.txt)
+- opencv-python
+- mediapipe
+- pygame
+- numpy
+
+### Hand Tracking
+#### [NEW] [hand_tracker.py](file:///c:/Users/abhay/blocks/hand_tracker.py)
+- Class `HandTracker` to handle initialization of MediaPipe.
+- Methods to process frames and return landmarks.
+- specific logic to return "Action" based on hand state (e.g., "Left", "Right", "Rotate").
+
+### Game Engine
+#### [NEW] [game.py](file:///c:/Users/abhay/blocks/game.py)
+- Pygame main loop.
+- `Block` class for the falling pieces.
+- Game state management (score, grid, game over).
+
+### Main Entry Point
+#### [MODIFY] [init.py](file:///c:/Users/abhay/blocks/init.py)
+- Rename to `main.py` or keep as [init.py](file:///c:/Users/abhay/blocks/init.py) (entry point).
+- Orchestrates the video feed and the game update loop.
+
+## Verification Plan
+
+### Manual Verification
+- Run the python script.
+- Verify camera feed opens.
+- Verify hand tracking landmarks are visible.
+- Verify game window opens and blocks fall.
+- **Critical**: Test that hand movements accurately move the blocks in the game.
